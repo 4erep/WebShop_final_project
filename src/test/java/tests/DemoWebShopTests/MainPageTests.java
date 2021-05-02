@@ -44,6 +44,7 @@ public class MainPageTests extends UITestBase {
 
     @Test
     @JiraIssues({@JiraIssue("QC3-28")})
+    @DisplayName("Subscribe to the newsletter")
     public void subscribeToNewsletter() {
         step("open url", () -> {
             open("");
@@ -60,7 +61,7 @@ public class MainPageTests extends UITestBase {
 
     @Test
     @JiraIssues({@JiraIssue("QC3-28")})
-    @DisplayName("All blocks are visible")
+    @DisplayName("Check that all blocks are visible on page")
     public void checkAllBlocksLoadedTest() {
         step("Check that all blocks are visible", () -> {
             open("");
@@ -71,13 +72,11 @@ public class MainPageTests extends UITestBase {
             $(".leftside-3").shouldBe(Condition.visible);
             $(".rightside-3").shouldBe(Condition.visible);
             $(".center-3").shouldBe(Condition.visible);
-            $(".footer").shouldBe(Condition.visible);
         });
     }
 
     @Test
     @JiraIssues({@JiraIssue("QC3-28")})
-    @Story("Main page")
     @DisplayName("Console log should not contain errors")
     void checkConsoleLogErrorsTest() {
         step("Open  Url", () ->

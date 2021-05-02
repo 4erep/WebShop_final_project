@@ -23,7 +23,7 @@ public class ProductPageTests extends UITestBase {
 
     @Test
     @JiraIssues({@JiraIssue("QC3-28")})
-    @DisplayName("Отправка e-mail через UI")
+    @DisplayName("Send e-mail from product page with UI")
     public void SendEmailToFriendWithCookiesAuthorizationUITest() {
         step("Set cookies", () -> {
             setAuthCookieFiles();
@@ -44,9 +44,8 @@ public class ProductPageTests extends UITestBase {
     }
 
     @Test
-    @Tag("UI")
     @JiraIssues({@JiraIssue("QC3-28")})
-    @DisplayName("Добавление продукта в вишлист через UI")
+    @DisplayName("Add product to wishlist with UI")
     public void addProductToWishList() {
         step("Set cookies", () -> {
             setAuthCookieFiles();

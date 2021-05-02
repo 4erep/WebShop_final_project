@@ -3,8 +3,8 @@ package config;
 
 import org.aeonbits.owner.Config;
 
-@org.aeonbits.owner.Config.LoadPolicy(org.aeonbits.owner.Config.LoadType.MERGE)
-@org.aeonbits.owner.Config.Sources({
+@Config.LoadPolicy(org.aeonbits.owner.Config.LoadType.MERGE)
+@Config.Sources({
         "system:properties",
         "classpath:config/testdata.properties"
 })

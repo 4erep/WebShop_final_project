@@ -14,7 +14,6 @@ import tests.APITestBase;
 
 import java.util.Map;
 
-import static io.qameta.allure.Allure.step;
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.CoreMatchers.is;
@@ -26,12 +25,12 @@ import static tests.TestData.getTestUsername;
 
 @Tag("API")
 @Owner("kvrudnev")
-@Feature("API test fo DemoWebShop")
+@Feature("API tests for DemoWebShop")
 public class APIDemoWebShopTests extends APITestBase {
 
     @Test
     @JiraIssues({@JiraIssue("QC3-28")})
-    @DisplayName("Отправка e-mail через API")
+    @DisplayName("Send e-mail from product page with API")
     public void SendEmailToFriendWithAuthorizationAPITest() {
         Map<String, String> cookiesAuth = new Authorization().getCookiesAuthorization(getTestUsername(), getTestPassword());
 
@@ -53,7 +52,7 @@ public class APIDemoWebShopTests extends APITestBase {
 
     @Test
     @JiraIssues({@JiraIssue("QC3-28")})
-    @DisplayName("Добавление продукта в вишлист через API")
+    @DisplayName("Add product to wishlist with API")
     public void addToWishListWithAuthorizationAPITest() {
         Map<String, String> cookiesAuth = new Authorization().getCookiesAuthorization(getTestUsername(), getTestPassword());
         given()
@@ -70,10 +69,9 @@ public class APIDemoWebShopTests extends APITestBase {
 
     @Test
     @JiraIssues({@JiraIssue("QC3-28")})
-    @DisplayName("Добавление продукта в корзину через API")
+    @DisplayName("Add product to cart with API")
     public void addToCartWithoutAuthorizationAPITest() {
         Map<String, String> cookies = new Authorization().getCookiesWithoutAuthorization();
-        step("Add product to cart", () -> {
             given()
                     .filter(filters().customTemplates())
                     .contentType("application/x-www-form-urlencoded; charset=UTF-8")
@@ -87,9 +85,8 @@ public class APIDemoWebShopTests extends APITestBase {
                     .body("success", is(true))
                     .body("updatetopcartsectionhtml", equalTo("(1)"));
 
-        });
+
+        }
+
 
     }
-
-
-}

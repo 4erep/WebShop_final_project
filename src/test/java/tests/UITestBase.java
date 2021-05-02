@@ -12,9 +12,9 @@ import java.util.Map;
 import static com.codeborne.selenide.Selenide.closeWebDriver;
 import static com.codeborne.selenide.Selenide.open;
 import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
+import static helpers.AttachmentsHelper.*;
 import static helpers.DriverHelper.*;
 import static helpers.WebConfigHelper.isVideoOn;
-import static helpers.AttachmentsHepler.*;
 import static tests.TestData.*;
 
 
