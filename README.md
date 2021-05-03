@@ -33,27 +33,25 @@
 
 ## Screenshots:
 
-### - Отчет о прохождении тестов в Jenkins
+### - Jenkins reports
 ![Jenkins](https://user-images.githubusercontent.com/30008212/116899335-a1b91a80-ac61-11eb-8cb8-34b71836e601.jpg)
 
-### - Отчёт Allure
+### - Allure reports
 ![Allure1](https://user-images.githubusercontent.com/30008212/116899875-4dfb0100-ac62-11eb-82e2-485aeec7e4ea.jpg)
 ![Allure2](https://user-images.githubusercontent.com/30008212/116899957-666b1b80-ac62-11eb-9697-97d1b7e79f7f.jpg)
 
 
 
 
-### - Перенос тестов в Allure Test Ops
-![image](https://user-images.githubusercontent.com/30008212/111575690-85603c00-87e1-11eb-8ca7-93eea5000068.jpg)
-
-### - Отчет о прохождении тестов в Telegram
-![image](https://user-images.githubusercontent.com/30008212/111575769-ade83600-87e1-11eb-93eb-290055cc875c.jpg)
-
-### - Video sample with passing test case
-![Video](https://user-images.githubusercontent.com/30008212/116897938-04a9b200-ac60-11eb-914f-aef2d6fe4096.gif)
+### - Transferring tests to Allure Test Ops
+![TestOps1](https://user-images.githubusercontent.com/30008212/116900397-e3969080-ac62-11eb-90c6-ad089c8b29a4.jpg)
+![TestOps2](https://user-images.githubusercontent.com/30008212/116901498-345ab900-ac64-11eb-8b6c-52204ed26013.jpg)
+![TestOps3](https://user-images.githubusercontent.com/30008212/116901703-73890a00-ac64-11eb-9500-c8a45cf6b431.jpg)
 
 
+### - Integration with Jira
+![Jira_1](https://user-images.githubusercontent.com/30008212/116901946-bcd95980-ac64-11eb-8735-bc1b601d64fe.jpg)
 
-![Jenkins](https://user-images.githubusercontent.com/30008212/116899335-a1b91a80-ac61-11eb-8cb8-34b71836e601.jpg)
 
-
+### - Telegram reports
+![Telegram_1](https://user-images.githubusercontent.com/30008212/116902122-f4480600-ac64-11eb-98f9-931f8244f72d.jpg)
