@@ -9,7 +9,7 @@
 :white_check_mark: Console log should not contain errors
 
 ### Product Page tests
-:white_check_mark: Check that all blocks are visible on page    
+:white_check_mark: Send e-mail from product page with UI       
 :white_check_mark: Add product to wishlist with UI
 
 ## API Tests
