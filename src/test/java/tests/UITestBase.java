@@ -48,7 +48,5 @@ public class UITestBase {
         closeWebDriver();
 
         if (isVideoOn()) attachVideo(sessionId);
-
     }
-
 }

@@ -25,13 +25,8 @@ public class ProductPageTests extends UITestBase {
     @JiraIssues({@JiraIssue("QC3-28")})
     @DisplayName("Send e-mail from product page with UI")
     public void SendEmailToFriendWithCookiesAuthorizationUITest() {
-        step("Set cookies", () -> {
-            setAuthCookieFiles();
-        });
-        step("Open product page", () -> {
-            open("" + product);
-            $(".account").shouldHave(text("qaguru@qa.guru"));
-        });
+        step("Set cookies", this::setAuthCookieFiles);
+        step("Open product page", () -> open("" + product));
         step("Send e-mail", () -> {
             $("[value='Email a friend']").click();
             $("#FriendEmail").val("Test@com.ru");
@@ -47,20 +42,14 @@ public class ProductPageTests extends UITestBase {
     @JiraIssues({@JiraIssue("QC3-28")})
     @DisplayName("Add product to wishlist with UI")
     public void addProductToWishList() {
-        step("Set cookies", () -> {
-            setAuthCookieFiles();
-        });
-        step("Open product page", () -> {
-            open("" + product);
-        });
+        step("Set cookies", this::setAuthCookieFiles);
+        step("Open product page", () -> open("" + product));
         String initialCount = basket.getText().
                 replaceAll("[^\\d.]", "");
         int initialWishListCount = Integer.parseInt(initialCount);
         String count = String.valueOf(initialWishListCount + 1);
 
-        step("Add product to wishlist", () -> {
-            $(".add-to-wishlist-button").click();
-        });
+        step("Add product to wishlist", () -> $(".add-to-wishlist-button").click());
         step("Check that product was added", () -> {
             basket.shouldHave(text(count).
                     because(String.format("Ожидамое количество %s не совпадает с фактическим количеством", count)));

@@ -5,7 +5,6 @@ import customAnnotations.JiraIssue;
 import customAnnotations.JiraIssues;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Owner;
-import io.qameta.allure.Story;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
@@ -46,9 +45,7 @@ public class MainPageTests extends UITestBase {
     @JiraIssues({@JiraIssue("QC3-28")})
     @DisplayName("Subscribe to the newsletter")
     public void subscribeToNewsletter() {
-        step("open url", () -> {
-            open("");
-        });
+        step("open url", () -> open(""));
         step("Enter e-mail to text field", () -> {
             $("#newsletter-email").val("www@test.ru");
             $("#newsletter-subscribe-button").click();
@@ -79,8 +76,7 @@ public class MainPageTests extends UITestBase {
     @JiraIssues({@JiraIssue("QC3-28")})
     @DisplayName("Console log should not contain errors")
     void checkConsoleLogErrorsTest() {
-        step("Open  Url", () ->
-                open(""));
+        step("Open  Url", () -> open(""));
         step("Verify there are no errors in console log", () -> {
             String consoleLogs = getConsoleLogs();
             assertThat(consoleLogs, not(containsString("SEVERE")));

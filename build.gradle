@@ -79,18 +79,16 @@ test {
     systemProperties(System.getProperties())
 }
 
-task UI(type: Test) {
+task ui(type: Test) {
     useJUnitPlatform {
         includeTags 'UI'
         systemProperties(System.getProperties())
     }
 }
 
-task API(type: Test) {
+task api(type: Test) {
     useJUnitPlatform {
         includeTags 'API'
         systemProperties(System.getProperties())
-
-
     }
 }

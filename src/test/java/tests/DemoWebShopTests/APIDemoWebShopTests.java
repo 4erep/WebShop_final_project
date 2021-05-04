@@ -84,9 +84,5 @@ public class APIDemoWebShopTests extends APITestBase {
                     .log().body()
                     .body("success", is(true))
                     .body("updatetopcartsectionhtml", equalTo("(1)"));
-
-
         }
-
-
     }
